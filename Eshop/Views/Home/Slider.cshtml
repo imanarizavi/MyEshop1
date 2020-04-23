@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DataLayer.Sliders>
+           
+<div class="slider-layer">
+    <div id="slider-one" class="owl-carousel">
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <a onclick="Visit(@item.SlideID)" href="@item.SlideLink" target="_blank"><img src="/Images/SliderImages/@item.ImageName" title="@item.SlideName"></a>
+        </div>
+    }
+
+    </div>
+</div>
+
+
+<script>
+    function Visit(id) {
+        $.get("/Home/VisitSlider/" + id);
+    }
+</script>

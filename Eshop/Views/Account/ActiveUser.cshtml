@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "ActiveUser";
+}
+
+<h2>فعالسازی حساب کاربری</h2>
+<hr/>
+
+@if (ViewBag.isOk != null)
+{
+    <div class="alert alert-success">
+        <p>حساب کاربری شما با موفقیت فعال گردید </p>
+        <a href="/Account/Login">ورود به سایت</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        <p> کاربری با اطلاعات ارسالی یافت نشد </p>
+    </div>
+}
+
